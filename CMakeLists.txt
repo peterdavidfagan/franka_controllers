@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(franka_example_controllers)
+project(franka_controllers)
 
 # Default to C++17
 if(NOT CMAKE_CXX_STANDARD)
