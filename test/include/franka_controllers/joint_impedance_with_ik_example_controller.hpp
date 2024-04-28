@@ -25,7 +25,7 @@
 
 using CallbackReturn = rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn;
 
-namespace franka_example_controllers {
+namespace franka_controllers {
 
 /**
  * joint impedance example controller get desired pose and use inverse kinematics LMA
@@ -115,4 +115,4 @@ class JointImpedanceWithIKExampleController : public controller_interface::Contr
   std::vector<double> joint_velocities_current_{0, 0, 0, 0, 0, 0, 0};
   std::vector<double> joint_efforts_current_{0, 0, 0, 0, 0, 0, 0};
 };
-}  // namespace franka_example_controllers
+}  // namespace franka_controllers

@@ -24,7 +24,7 @@
 
 using CallbackReturn = rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn;
 
-namespace franka_example_controllers {
+namespace franka_controllers {
 
 /**
  * The cartesian pose example controller
@@ -54,4 +54,4 @@ class CartesianOrientationExampleController : public controller_interface::Contr
   double elapsed_time_{0.0};
 };
 
-}  // namespace franka_example_controllers
+}  // namespace franka_controllers

@@ -32,7 +32,7 @@ TEST(TestLoadGravityCompensationExampleController, load_controller) {
 
   auto response =
       cm.load_controller("test_gravity_compensation_example_controller",
-                         "franka_example_controllers/GravityCompensationExampleController");
+                         "franka_controllers/GravityCompensationExampleController");
 
   ASSERT_NE(response, nullptr);
 

@@ -18,38 +18,38 @@
  * of this header change the visibility of certain symbols which the rclcpp
  * library cannot have, but the consuming code must have inorder to link.
  */
-#ifndef FRANKA_EXAMPLE_CONTROLLERS__VISIBILITY_CONTROL_H_
-#define FRANKA_EXAMPLE_CONTROLLERS__VISIBILITY_CONTROL_H_
+#ifndef franka_controllers__VISIBILITY_CONTROL_H_
+#define franka_controllers__VISIBILITY_CONTROL_H_
 
 // This logic was borrowed (then namespaced) from the examples on the gcc wiki:
 //     https://gcc.gnu.org/wiki/Visibility
 
 #if defined _WIN32 || defined __CYGWIN__
 #ifdef __GNUC__
-#define FRANKA_EXAMPLE_CONTROLLERS_EXPORT __attribute__((dllexport))
-#define FRANKA_EXAMPLE_CONTROLLERS_IMPORT __attribute__((dllimport))
+#define franka_controllers_EXPORT __attribute__((dllexport))
+#define franka_controllers_IMPORT __attribute__((dllimport))
 #else
-#define FRANKA_EXAMPLE_CONTROLLERS_EXPORT __declspec(dllexport)
-#define FRANKA_EXAMPLE_CONTROLLERS_IMPORT __declspec(dllimport)
+#define franka_controllers_EXPORT __declspec(dllexport)
+#define franka_controllers_IMPORT __declspec(dllimport)
 #endif
-#ifdef FRANKA_EXAMPLE_CONTROLLERS_BUILDING_DLL
-#define FRANKA_EXAMPLE_CONTROLLERS_PUBLIC FRANKA_EXAMPLE_CONTROLLERS_EXPORT
+#ifdef franka_controllers_BUILDING_DLL
+#define franka_controllers_PUBLIC franka_controllers_EXPORT
 #else
-#define FRANKA_EXAMPLE_CONTROLLERS_PUBLIC FRANKA_EXAMPLE_CONTROLLERS_IMPORT
+#define franka_controllers_PUBLIC franka_controllers_IMPORT
 #endif
-#define FRANKA_EXAMPLE_CONTROLLERS_PUBLIC_TYPE FRANKA_EXAMPLE_CONTROLLERS_PUBLIC
-#define FRANKA_EXAMPLE_CONTROLLERS_LOCAL
+#define franka_controllers_PUBLIC_TYPE franka_controllers_PUBLIC
+#define franka_controllers_LOCAL
 #else
-#define FRANKA_EXAMPLE_CONTROLLERS_EXPORT __attribute__((visibility("default")))
-#define FRANKA_EXAMPLE_CONTROLLERS_IMPORT
+#define franka_controllers_EXPORT __attribute__((visibility("default")))
+#define franka_controllers_IMPORT
 #if __GNUC__ >= 4
-#define FRANKA_EXAMPLE_CONTROLLERS_PUBLIC __attribute__((visibility("default")))
-#define FRANKA_EXAMPLE_CONTROLLERS_LOCAL __attribute__((visibility("hidden")))
+#define franka_controllers_PUBLIC __attribute__((visibility("default")))
+#define franka_controllers_LOCAL __attribute__((visibility("hidden")))
 #else
-#define FRANKA_EXAMPLE_CONTROLLERS_PUBLIC
-#define FRANKA_EXAMPLE_CONTROLLERS_LOCAL
+#define franka_controllers_PUBLIC
+#define franka_controllers_LOCAL
 #endif
-#define FRANKA_EXAMPLE_CONTROLLERS_PUBLIC_TYPE
+#define franka_controllers_PUBLIC_TYPE
 #endif
 
-#endif  // FRANKA_EXAMPLE_CONTROLLERS__VISIBILITY_CONTROL_H_
+#endif  // franka_controllers__VISIBILITY_CONTROL_H_

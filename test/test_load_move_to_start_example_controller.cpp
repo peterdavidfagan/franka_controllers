@@ -31,7 +31,7 @@ TEST(TestLoadMoveToStartExampleController, load_controller) {
                                            executor, "test_controller_manager");
 
   auto response = cm.load_controller("test_move_to_start_example_controller",
-                                     "franka_example_controllers/MoveToStartExampleController");
+                                     "franka_controllers/MoveToStartExampleController");
 
   ASSERT_NE(response, nullptr);
 

@@ -25,7 +25,7 @@
 
 using CallbackReturn = rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn;
 
-namespace franka_example_controllers {
+namespace franka_controllers {
 
 /// The move to start example controller moves the robot into default pose.
 class MoveToStartExampleController : public controller_interface::ControllerInterface {
@@ -55,4 +55,4 @@ class MoveToStartExampleController : public controller_interface::ControllerInte
 
   void updateJointStates();
 };
-}  // namespace franka_example_controllers
+}  // namespace franka_controllers

@@ -16,7 +16,7 @@
 #include <memory>
 #include <vector>
 
-#include "franka_example_controllers/gravity_compensation_example_controller.hpp"
+#include "franka_controllers/gravity_compensation_example_controller.hpp"
 #include "rclcpp/rclcpp.hpp"
 
 #include "hardware_interface/handle.hpp"
@@ -39,7 +39,7 @@ class TestGravityCompensationExample : public ::testing::Test {
   void SetUpController();
 
  protected:
-  std::unique_ptr<franka_example_controllers::GravityCompensationExampleController> controller_;
+  std::unique_ptr<franka_controllers::GravityCompensationExampleController> controller_;
 
   // dummy joint state values used for tests
   const std::vector<std::string> joint_names_ = {"joint1", "joint2", "joint3", "joint4",
@@ -65,7 +65,7 @@ void TestGravityCompensationExample::TearDownTestSuite() {
 
 void TestGravityCompensationExample::SetUp() {
   controller_ =
-      std::make_unique<franka_example_controllers::GravityCompensationExampleController>();
+      std::make_unique<franka_controllers::GravityCompensationExampleController>();
 }
 
 void TestGravityCompensationExample::TearDown() {

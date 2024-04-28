@@ -23,7 +23,7 @@
 
 using CallbackReturn = rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn;
 
-namespace franka_example_controllers {
+namespace franka_controllers {
 
 /**
  * The joint position example controller moves in a periodic movement.
@@ -53,4 +53,4 @@ class JointPositionExampleController : public controller_interface::ControllerIn
   rclcpp::Time start_time_;
 };
 
-}  // namespace franka_example_controllers
+}  // namespace franka_controllers

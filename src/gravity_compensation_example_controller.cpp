@@ -12,12 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include <franka_example_controllers/gravity_compensation_example_controller.hpp>
+#include <franka_controllers/gravity_compensation_example_controller.hpp>
 
 #include <exception>
 #include <string>
 
-namespace franka_example_controllers {
+namespace franka_controllers {
 
 controller_interface::InterfaceConfiguration
 GravityCompensationExampleController::command_interface_configuration() const {
@@ -59,8 +59,8 @@ CallbackReturn GravityCompensationExampleController::on_init() {
   }
   return CallbackReturn::SUCCESS;
 }
-}  // namespace franka_example_controllers
+}  // namespace franka_controllers
 #include "pluginlib/class_list_macros.hpp"
 // NOLINTNEXTLINE
-PLUGINLIB_EXPORT_CLASS(franka_example_controllers::GravityCompensationExampleController,
+PLUGINLIB_EXPORT_CLASS(franka_controllers::GravityCompensationExampleController,
                        controller_interface::ControllerInterface)

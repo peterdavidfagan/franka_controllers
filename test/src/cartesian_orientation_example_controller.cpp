@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include <franka_example_controllers/cartesian_orientation_example_controller.hpp>
-#include <franka_example_controllers/default_robot_behavior_utils.hpp>
+#include <franka_controllers/cartesian_orientation_example_controller.hpp>
+#include <franka_controllers/default_robot_behavior_utils.hpp>
 
 #include <cassert>
 #include <cmath>
@@ -22,7 +22,7 @@
 
 using namespace std::chrono_literals;
 
-namespace franka_example_controllers {
+namespace franka_controllers {
 
 controller_interface::InterfaceConfiguration
 CartesianOrientationExampleController::command_interface_configuration() const {
@@ -117,8 +117,8 @@ controller_interface::CallbackReturn CartesianOrientationExampleController::on_d
   return CallbackReturn::SUCCESS;
 }
 
-}  // namespace franka_example_controllers
+}  // namespace franka_controllers
 #include "pluginlib/class_list_macros.hpp"
 // NOLINTNEXTLINE
-PLUGINLIB_EXPORT_CLASS(franka_example_controllers::CartesianOrientationExampleController,
+PLUGINLIB_EXPORT_CLASS(franka_controllers::CartesianOrientationExampleController,
                        controller_interface::ControllerInterface)

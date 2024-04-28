@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include <franka_example_controllers/move_to_start_example_controller.hpp>
+#include <franka_controllers/move_to_start_example_controller.hpp>
 
 #include <cassert>
 #include <cmath>
@@ -21,7 +21,7 @@
 #include <Eigen/Eigen>
 #include <controller_interface/controller_interface.hpp>
 
-namespace franka_example_controllers {
+namespace franka_controllers {
 
 controller_interface::InterfaceConfiguration
 MoveToStartExampleController::command_interface_configuration() const {
@@ -135,8 +135,8 @@ void MoveToStartExampleController::updateJointStates() {
     dq_(i) = velocity_interface.get_value();
   }
 }
-}  // namespace franka_example_controllers
+}  // namespace franka_controllers
 #include "pluginlib/class_list_macros.hpp"
 // NOLINTNEXTLINE
-PLUGINLIB_EXPORT_CLASS(franka_example_controllers::MoveToStartExampleController,
+PLUGINLIB_EXPORT_CLASS(franka_controllers::MoveToStartExampleController,
                        controller_interface::ControllerInterface)

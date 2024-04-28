@@ -23,7 +23,7 @@
 
 using CallbackReturn = rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn;
 
-namespace franka_example_controllers {
+namespace franka_controllers {
 
 /**
  * The cartesian velocity example controller
@@ -53,4 +53,4 @@ class CartesianVelocityExampleController : public controller_interface::Controll
   rclcpp::Duration elapsed_time_ = rclcpp::Duration(0, 0);
 };
 
-}  // namespace franka_example_controllers
+}  // namespace franka_controllers

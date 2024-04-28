@@ -34,7 +34,7 @@ void MoveToStartExampleControllerTest::TearDownTestSuite() {
 }
 
 void MoveToStartExampleControllerTest::SetUp() {
-  controller_ = std::make_unique<franka_example_controllers::MoveToStartExampleController>();
+  controller_ = std::make_unique<franka_controllers::MoveToStartExampleController>();
 }
 
 void MoveToStartExampleControllerTest::TearDown() {

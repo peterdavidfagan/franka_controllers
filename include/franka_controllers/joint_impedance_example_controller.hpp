@@ -22,7 +22,7 @@
 
 using CallbackReturn = rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn;
 
-namespace franka_example_controllers {
+namespace franka_controllers {
 
 /**
  * The joint impedance example controller moves joint 4 and 5 in a very compliant periodic movement.
@@ -53,4 +53,4 @@ class JointImpedanceExampleController : public controller_interface::ControllerI
   void updateJointStates();
 };
 
-}  // namespace franka_example_controllers
+}  // namespace franka_controllers

@@ -20,7 +20,7 @@
 
 #include "gtest/gtest.h"
 
-#include "franka_example_controllers/move_to_start_example_controller.hpp"
+#include "franka_controllers/move_to_start_example_controller.hpp"
 #include "hardware_interface/handle.hpp"
 #include "hardware_interface/types/hardware_interface_type_values.hpp"
 
@@ -43,7 +43,7 @@ class MoveToStartExampleControllerTest : public ::testing::Test {
   void SetUpController();
 
  protected:
-  std::unique_ptr<franka_example_controllers::MoveToStartExampleController> controller_;
+  std::unique_ptr<franka_controllers::MoveToStartExampleController> controller_;
 
   // dummy joint state values used for tests
   const std::vector<std::string> joint_names_ = {"joint1", "joint2", "joint3", "joint4",

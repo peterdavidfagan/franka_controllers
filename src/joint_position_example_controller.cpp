@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include <franka_example_controllers/joint_position_example_controller.hpp>
+#include <franka_controllers/joint_position_example_controller.hpp>
 
 #include <cassert>
 #include <cmath>
@@ -21,7 +21,7 @@
 
 #include <Eigen/Eigen>
 
-namespace franka_example_controllers {
+namespace franka_controllers {
 
 controller_interface::InterfaceConfiguration
 JointPositionExampleController::command_interface_configuration() const {
@@ -92,8 +92,8 @@ CallbackReturn JointPositionExampleController::on_activate(
   return CallbackReturn::SUCCESS;
 }
 
-}  // namespace franka_example_controllers
+}  // namespace franka_controllers
 #include "pluginlib/class_list_macros.hpp"
 // NOLINTNEXTLINE
-PLUGINLIB_EXPORT_CLASS(franka_example_controllers::JointPositionExampleController,
+PLUGINLIB_EXPORT_CLASS(franka_controllers::JointPositionExampleController,
                        controller_interface::ControllerInterface)

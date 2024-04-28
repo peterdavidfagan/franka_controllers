@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include <franka_example_controllers/model_example_controller.hpp>
+#include <franka_controllers/model_example_controller.hpp>
 
 #include "hardware_interface/types/hardware_interface_return_values.hpp"
 #include "hardware_interface/types/hardware_interface_type_values.hpp"
@@ -28,7 +28,7 @@ std::ostream& operator<<(std::ostream& ostream, const std::array<T, N>& array) {
 }
 }  // anonymous namespace
 
-namespace franka_example_controllers {
+namespace franka_controllers {
 
 controller_interface::CallbackReturn ModelExampleController::on_init() {
   try {
@@ -116,9 +116,9 @@ controller_interface::return_type ModelExampleController::update(
   return controller_interface::return_type::OK;
 }
 
-}  // namespace franka_example_controllers
+}  // namespace franka_controllers
 
 #include "pluginlib/class_list_macros.hpp"
 // NOLINTNEXTLINE
-PLUGINLIB_EXPORT_CLASS(franka_example_controllers::ModelExampleController,
+PLUGINLIB_EXPORT_CLASS(franka_controllers::ModelExampleController,
                        controller_interface::ControllerInterface)

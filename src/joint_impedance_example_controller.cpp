@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include <franka_example_controllers/joint_impedance_example_controller.hpp>
+#include <franka_controllers/joint_impedance_example_controller.hpp>
 
 #include <cassert>
 #include <cmath>
@@ -21,7 +21,7 @@
 
 #include <Eigen/Eigen>
 
-namespace franka_example_controllers {
+namespace franka_controllers {
 
 controller_interface::InterfaceConfiguration
 JointImpedanceExampleController::command_interface_configuration() const {
@@ -132,8 +132,8 @@ void JointImpedanceExampleController::updateJointStates() {
   }
 }
 
-}  // namespace franka_example_controllers
+}  // namespace franka_controllers
 #include "pluginlib/class_list_macros.hpp"
 // NOLINTNEXTLINE
-PLUGINLIB_EXPORT_CLASS(franka_example_controllers::JointImpedanceExampleController,
+PLUGINLIB_EXPORT_CLASS(franka_controllers::JointImpedanceExampleController,
                        controller_interface::ControllerInterface)

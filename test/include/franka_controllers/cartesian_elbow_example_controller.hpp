@@ -23,7 +23,7 @@
 
 using CallbackReturn = rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn;
 
-namespace franka_example_controllers {
+namespace franka_controllers {
 
 /**
  * The elbow example controller through cartesian pose command interface
@@ -53,4 +53,4 @@ class CartesianElbowExampleController : public controller_interface::ControllerI
   const double traj_frequency_{0.001};
 };
 
-}  // namespace franka_example_controllers
+}  // namespace franka_controllers

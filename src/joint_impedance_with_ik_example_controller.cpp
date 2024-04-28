@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include <franka_example_controllers/default_robot_behavior_utils.hpp>
-#include <franka_example_controllers/joint_impedance_with_ik_example_controller.hpp>
+#include <franka_controllers/default_robot_behavior_utils.hpp>
+#include <franka_controllers/joint_impedance_with_ik_example_controller.hpp>
 
 #include <cassert>
 #include <cmath>
@@ -25,7 +25,7 @@
 using namespace std::chrono_literals;
 using Vector7d = Eigen::Matrix<double, 7, 1>;
 
-namespace franka_example_controllers {
+namespace franka_controllers {
 
 controller_interface::InterfaceConfiguration
 JointImpedanceWithIKExampleController::command_interface_configuration() const {
@@ -271,8 +271,8 @@ controller_interface::CallbackReturn JointImpedanceWithIKExampleController::on_d
   return CallbackReturn::SUCCESS;
 }
 
-}  // namespace franka_example_controllers
+}  // namespace franka_controllers
 #include "pluginlib/class_list_macros.hpp"
 // NOLINTNEXTLINE
-PLUGINLIB_EXPORT_CLASS(franka_example_controllers::JointImpedanceWithIKExampleController,
+PLUGINLIB_EXPORT_CLASS(franka_controllers::JointImpedanceWithIKExampleController,
                        controller_interface::ControllerInterface)

@@ -23,7 +23,7 @@
 
 using CallbackReturn = rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn;
 
-namespace franka_example_controllers {
+namespace franka_controllers {
 
 /// The model example controller prints robot model parameters.
 class ModelExampleController : public controller_interface::ControllerInterface {
@@ -54,4 +54,4 @@ class ModelExampleController : public controller_interface::ControllerInterface 
   const std::string k_robot_state_interface_name{"robot_state"};
   const std::string k_robot_model_interface_name{"robot_model"};
 };
-}  // namespace franka_example_controllers
+}  // namespace franka_controllers
