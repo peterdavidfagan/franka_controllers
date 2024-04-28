@@ -1,8 +1,0 @@
-<library path="franka_controllers">
-    <class name="franka_controllers/GravityCompensationExampleController"
-           type="franka_controllers::GravityCompensationExampleController" base_class_type="controller_interface::ControllerInterface">
-        <description>
-            The gravity compensation controller only sends zero torques so that the robot does gravity compensation
-        </description>
-    </class>
-</library>
