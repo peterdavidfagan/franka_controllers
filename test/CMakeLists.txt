@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(franka_example_controllers)
+project(franka_controllers)
 
 # Default to C++17
 if(NOT CMAKE_CXX_STANDARD)
@@ -61,12 +61,12 @@ ament_target_dependencies(
         moveit_msgs
 )
 
-generate_parameter_library(franka_example_controllers_parameters src/model_example_controller_parameters.yaml)
+generate_parameter_library(franka_controllers_parameters src/model_example_controller_parameters.yaml)
 
-target_link_libraries(${PROJECT_NAME} franka_example_controllers_parameters)
+target_link_libraries(${PROJECT_NAME} franka_controllers_parameters)
 
 pluginlib_export_plugin_description_file(
-        controller_interface franka_example_controllers.xml)
+        controller_interface franka_controllers.xml)
 
 install(
         TARGETS
