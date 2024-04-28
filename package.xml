@@ -3,7 +3,7 @@
 <package format="3">
   <name>franka_controllers</name>
   <version>0.0.0</version>
-  <description>controller implementations for franka emika panda</description>
+  <description>franka_example_controllers provides example code for controllingFranka Robotics research robots with ros2_control</description>
   <maintainer email="peterdavidfagan@gmail.com">Peter David Fagan</maintainer>
   <license>Apache 2.0</license>
 
